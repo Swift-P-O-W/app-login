@@ -1,0 +1,41 @@
+# Xcode
+DerivedData/
+.idea/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Carthage
+Carthage/Build/
+Carthage/Checkouts/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Archives
+*.xcarchive
+
+# Shared Playground Data
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager Binary Artifacts
+.xcframework/
+
+# Miscellaneous
+*.DS_Store
+*.log
