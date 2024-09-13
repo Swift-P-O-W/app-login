@@ -16,6 +16,7 @@
 		58249FB02C939A260035AE45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FAC2C939A260035AE45 /* RegisterViewController.swift */; };
 		58249FB12C939A260035AE45 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FAD2C939A260035AE45 /* RegisterViewModel.swift */; };
 		58249FB72C94E8D80035AE45 /* LoginEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FB62C94E8D80035AE45 /* LoginEnum.swift */; };
+		58249FB92C9505160035AE45 /* ConfigBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FB82C9505160035AE45 /* ConfigBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		58249FAC2C939A260035AE45 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		58249FAD2C939A260035AE45 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		58249FB62C94E8D80035AE45 /* LoginEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEnum.swift; sourceTree = "<group>"; };
+		58249FB82C9505160035AE45 /* ConfigBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				58249FB62C94E8D80035AE45 /* LoginEnum.swift */,
+				58249FB82C9505160035AE45 /* ConfigBackground.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				58249F852C9245750035AE45 /* ViewController.swift in Sources */,
 				58249FB12C939A260035AE45 /* RegisterViewModel.swift in Sources */,
 				58249FB02C939A260035AE45 /* RegisterViewController.swift in Sources */,
+				58249FB92C9505160035AE45 /* ConfigBackground.swift in Sources */,
 				58249FAF2C939A260035AE45 /* RegisterView.swift in Sources */,
 				58249FB72C94E8D80035AE45 /* LoginEnum.swift in Sources */,
 				58249F812C9245750035AE45 /* AppDelegate.swift in Sources */,
