@@ -10,6 +10,7 @@ import UIKit
 
 class RegisterView: UIView {
     private let viewController: RegisterViewController
+    private let configBackground = ConfigBackground()
     
     lazy var title: UILabel = {
         let label = UILabel()
@@ -102,7 +103,15 @@ class RegisterView: UIView {
     }
     
     func configBackGround() {
-        backgroundColor = UIColor(named: "PurpleSecondary")
+        configBackground.applyGradientBackground(view: self, firstColor: LoginEnum.Colors.purplePrimary, secondColor: LoginEnum.Colors.purpleSecondary)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if let gradientLayer = self.layer.sublayers?.first as? CAGradientLayer {
+            gradientLayer.frame = self.bounds
+        }
     }
     
     func configHierarchy() {
