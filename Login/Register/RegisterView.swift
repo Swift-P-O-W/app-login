@@ -12,6 +12,15 @@ class RegisterView: UIView {
     private let viewController: RegisterViewController
     private let configBackground = ConfigBackground()
     
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "arrow-back"), for: .normal)
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
+        return button
+    }()
+    
     lazy var title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -102,7 +111,11 @@ class RegisterView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configBackGround() {
+    @objc private func backButtonAction() {
+        viewController.backButtonAction()
+    }
+    
+    @objc func configBackGround() {
         configBackground.applyGradientBackground(view: self, firstColor: LoginEnum.Colors.purplePrimary, secondColor: LoginEnum.Colors.purpleSecondary)
     }
     
@@ -115,6 +128,7 @@ class RegisterView: UIView {
     }
     
     func configHierarchy() {
+        addSubview(backButton)
         addSubview(title)
         addSubview(userNameLabel)
         addSubview(userNameTextField)
@@ -127,7 +141,11 @@ class RegisterView: UIView {
     
     func configConstraints() {
         NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            
+            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            
+            title.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 40),
             title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
             userNameLabel.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 30),

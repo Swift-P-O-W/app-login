@@ -36,4 +36,8 @@ class RegisterViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    func backButtonAction() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

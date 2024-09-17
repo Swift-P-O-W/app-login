@@ -64,12 +64,12 @@
 		58249F7F2C9245750035AE45 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				58249F892C9245760035AE45 /* Assets.xcassets */,
 				58249FB52C94E8CA0035AE45 /* Utils */,
 				58249FAE2C939A260035AE45 /* Register */,
 				58249F802C9245750035AE45 /* AppDelegate.swift */,
 				58249F822C9245750035AE45 /* SceneDelegate.swift */,
 				58249F842C9245750035AE45 /* ViewController.swift */,
-				58249F892C9245760035AE45 /* Assets.xcassets */,
 				58249F8B2C9245760035AE45 /* LaunchScreen.storyboard */,
 				58249F8E2C9245760035AE45 /* Info.plist */,
 			);
