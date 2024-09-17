@@ -90,13 +90,14 @@ class RegisterView: UIView {
         return textField
     }()
     
-    lazy var subTitle: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Or Sign up with" //TODO - ENUM
-        label.font = .systemFont(ofSize: 24)
-        label.textColor = .white
-        return label
+    lazy var signUpButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Sign up", for: .normal)
+        button.setTitleColor(UIColor(named: "PurpleSecondary"), for: .normal)
+        button.backgroundColor = UIColor(named: "PurpleTertiary")
+        button.layer.cornerRadius = 12
+        return button
     }()
     
     init(viewController: RegisterViewController) {
@@ -136,7 +137,7 @@ class RegisterView: UIView {
         addSubview(emailLabelTextField)
         addSubview(passwordLabel)
         addSubview(passwordTextField)
-        addSubview(subTitle)
+        addSubview(signUpButton)
     }
     
     func configConstraints() {
@@ -172,8 +173,10 @@ class RegisterView: UIView {
             passwordTextField.leadingAnchor.constraint(equalTo: userNameTextField.leadingAnchor),
             passwordTextField.heightAnchor.constraint(equalTo: userNameTextField.heightAnchor),
             
-            subTitle.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
-            subTitle.centerXAnchor.constraint(equalTo: centerXAnchor),
+            signUpButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            signUpButton.trailingAnchor.constraint(equalTo: userNameTextField.trailingAnchor),
+            signUpButton.leadingAnchor.constraint(equalTo: userNameTextField.leadingAnchor),
+            signUpButton.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
 }
