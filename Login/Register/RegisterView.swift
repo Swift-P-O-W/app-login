@@ -24,7 +24,7 @@ class RegisterView: UIView {
     lazy var title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Sign up" //TODO - ENUM
+        label.text = LoginEnum.Register.title
         label.font = .systemFont(ofSize: 24)
         label.textColor = .white
         return label
@@ -34,7 +34,7 @@ class RegisterView: UIView {
     lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Username" // TODO - ENUM
+        label.text = LoginEnum.Register.username
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         label.textColor = .white
         return label
@@ -54,7 +54,7 @@ class RegisterView: UIView {
     lazy var emailLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Email" // TODO - ENUM
+        label.text = LoginEnum.Register.email
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         label.textColor = .white
         return label
@@ -74,7 +74,7 @@ class RegisterView: UIView {
     lazy var passwordLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Password" // TODO - ENUM
+        label.text = LoginEnum.Register.password
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         label.textColor = .white
         return label
@@ -93,7 +93,7 @@ class RegisterView: UIView {
     lazy var signUpButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Sign up", for: .normal)
+        button.setTitle(LoginEnum.Register.title, for: .normal)
         button.setTitleColor(UIColor(named: "PurpleSecondary"), for: .normal)
         button.backgroundColor = UIColor(named: "PurpleTertiary")
         button.layer.cornerRadius = 12
