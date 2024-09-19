@@ -80,14 +80,10 @@ class RegisterView: UIView {
         return label
     }()
     
-    lazy var passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.keyboardType = .default
-        textField.isSecureTextEntry = false
-        textField.layer.cornerRadius = 12
-        textField.backgroundColor = UIColor(named: "PurplePrimary")
-        return textField
+    lazy var passwordTextField: PasswordTextField = {
+        let passwordField = PasswordTextField()
+        passwordField.translatesAutoresizingMaskIntoConstraints = false
+        return passwordField
     }()
     
     lazy var signUpButton: UIButton = {
