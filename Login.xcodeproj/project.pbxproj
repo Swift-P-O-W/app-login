@@ -69,7 +69,7 @@
 				58249F892C9245760035AE45 /* Assets.xcassets */,
 				582EAF632C9A54BA00673136 /* Components */,
 				58249FB52C94E8CA0035AE45 /* Utils */,
-				58249FAE2C939A260035AE45 /* Register */,
+				5868515A2C9D09D500D2422F /* Screens */,
 				58249F802C9245750035AE45 /* AppDelegate.swift */,
 				58249F822C9245750035AE45 /* SceneDelegate.swift */,
 				58249F842C9245750035AE45 /* ViewController.swift */,
@@ -104,6 +104,14 @@
 				582EAF652C9A54DE00673136 /* PasswordTextField.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		5868515A2C9D09D500D2422F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				58249FAE2C939A260035AE45 /* Register */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
