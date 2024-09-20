@@ -12,6 +12,12 @@
 		58249F852C9245750035AE45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249F842C9245750035AE45 /* ViewController.swift */; };
 		58249F8A2C9245760035AE45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58249F892C9245760035AE45 /* Assets.xcassets */; };
 		58249F8D2C9245760035AE45 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 58249F8C2C9245760035AE45 /* Base */; };
+		58249FAF2C939A260035AE45 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FAB2C939A260035AE45 /* RegisterView.swift */; };
+		58249FB02C939A260035AE45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FAC2C939A260035AE45 /* RegisterViewController.swift */; };
+		58249FB12C939A260035AE45 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FAD2C939A260035AE45 /* RegisterViewModel.swift */; };
+		58249FB72C94E8D80035AE45 /* LoginEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FB62C94E8D80035AE45 /* LoginEnum.swift */; };
+		58249FB92C9505160035AE45 /* ConfigBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FB82C9505160035AE45 /* ConfigBackground.swift */; };
+		582EAF662C9A54DE00673136 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EAF652C9A54DE00673136 /* PasswordTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		58249F892C9245760035AE45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58249F8C2C9245760035AE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58249F8E2C9245760035AE45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58249FAB2C939A260035AE45 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		58249FAC2C939A260035AE45 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		58249FAD2C939A260035AE45 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		58249FB62C94E8D80035AE45 /* LoginEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEnum.swift; sourceTree = "<group>"; };
+		58249FB82C9505160035AE45 /* ConfigBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigBackground.swift; sourceTree = "<group>"; };
+		582EAF652C9A54DE00673136 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,52 @@
 		58249F7F2C9245750035AE45 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				58249F892C9245760035AE45 /* Assets.xcassets */,
+				582EAF632C9A54BA00673136 /* Components */,
+				58249FB52C94E8CA0035AE45 /* Utils */,
+				5868515A2C9D09D500D2422F /* Screens */,
 				58249F802C9245750035AE45 /* AppDelegate.swift */,
 				58249F822C9245750035AE45 /* SceneDelegate.swift */,
 				58249F842C9245750035AE45 /* ViewController.swift */,
-				58249F892C9245760035AE45 /* Assets.xcassets */,
 				58249F8B2C9245760035AE45 /* LaunchScreen.storyboard */,
 				58249F8E2C9245760035AE45 /* Info.plist */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		58249FAE2C939A260035AE45 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				58249FAB2C939A260035AE45 /* RegisterView.swift */,
+				58249FAC2C939A260035AE45 /* RegisterViewController.swift */,
+				58249FAD2C939A260035AE45 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		58249FB52C94E8CA0035AE45 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				58249FB62C94E8D80035AE45 /* LoginEnum.swift */,
+				58249FB82C9505160035AE45 /* ConfigBackground.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		582EAF632C9A54BA00673136 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				582EAF652C9A54DE00673136 /* PasswordTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5868515A2C9D09D500D2422F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				58249FAE2C939A260035AE45 /* Register */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				58249F852C9245750035AE45 /* ViewController.swift in Sources */,
+				58249FB12C939A260035AE45 /* RegisterViewModel.swift in Sources */,
+				582EAF662C9A54DE00673136 /* PasswordTextField.swift in Sources */,
+				58249FB02C939A260035AE45 /* RegisterViewController.swift in Sources */,
+				58249FB92C9505160035AE45 /* ConfigBackground.swift in Sources */,
+				58249FAF2C939A260035AE45 /* RegisterView.swift in Sources */,
+				58249FB72C94E8D80035AE45 /* LoginEnum.swift in Sources */,
 				58249F812C9245750035AE45 /* AppDelegate.swift in Sources */,
 				58249F832C9245750035AE45 /* SceneDelegate.swift in Sources */,
 			);
