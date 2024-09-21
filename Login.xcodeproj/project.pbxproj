@@ -72,7 +72,6 @@
 				5868515A2C9D09D500D2422F /* Screens */,
 				58249F802C9245750035AE45 /* AppDelegate.swift */,
 				58249F822C9245750035AE45 /* SceneDelegate.swift */,
-				58249F842C9245750035AE45 /* ViewController.swift */,
 				58249F8B2C9245760035AE45 /* LaunchScreen.storyboard */,
 				58249F8E2C9245760035AE45 /* Info.plist */,
 			);
@@ -106,9 +105,18 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		584025842C9E62F10094710A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				58249F842C9245750035AE45 /* ViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		5868515A2C9D09D500D2422F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				584025842C9E62F10094710A /* Login */,
 				58249FAE2C939A260035AE45 /* Register */,
 			);
 			path = Screens;
