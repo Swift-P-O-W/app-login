@@ -6,5 +6,6 @@ target 'Login' do
   use_frameworks!
 
   # Pods for Login
+  pod 'SnapKit', '~> 5.0.0'
 
 end
