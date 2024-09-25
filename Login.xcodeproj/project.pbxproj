@@ -18,7 +18,7 @@
 		58249FB72C94E8D80035AE45 /* LoginEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FB62C94E8D80035AE45 /* LoginEnum.swift */; };
 		58249FB92C9505160035AE45 /* ConfigBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FB82C9505160035AE45 /* ConfigBackground.swift */; };
 		582EAF662C9A54DE00673136 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EAF652C9A54DE00673136 /* PasswordTextField.swift */; };
-		584025862CA23D7A0094710A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 584025852CA23D7A0094710A /* GoogleService-Info.plist */; };
+		584025882CA3A3C30094710A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 584025872CA3A3C30094710A /* GoogleService-Info.plist */; };
 		AE88ED5C603710AA72AE59E3 /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477C5E5DD89FA2C3A1ABDBA3 /* Pods_Login.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,7 @@
 		58249FB62C94E8D80035AE45 /* LoginEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEnum.swift; sourceTree = "<group>"; };
 		58249FB82C9505160035AE45 /* ConfigBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigBackground.swift; sourceTree = "<group>"; };
 		582EAF652C9A54DE00673136 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
-		584025852CA23D7A0094710A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		584025872CA3A3C30094710A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8B6169A3CE3C55B871F6037 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
 		E0A8574C4CFD0CFB446CB07C /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +57,7 @@
 		58249F742C9245750035AE45 = {
 			isa = PBXGroup;
 			children = (
+				584025872CA3A3C30094710A /* GoogleService-Info.plist */,
 				58249F7F2C9245750035AE45 /* Login */,
 				58249F7E2C9245750035AE45 /* Products */,
 				8C8C95CDC766363EF0A4B499 /* Pods */,
@@ -76,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				58249F892C9245760035AE45 /* Assets.xcassets */,
-				584025852CA23D7A0094710A /* GoogleService-Info.plist */,
 				582EAF632C9A54BA00673136 /* Components */,
 				58249FB52C94E8CA0035AE45 /* Utils */,
 				5868515A2C9D09D500D2422F /* Screens */,
@@ -211,7 +211,7 @@
 			files = (
 				58249F8A2C9245760035AE45 /* Assets.xcassets in Resources */,
 				58249F8D2C9245760035AE45 /* Base in Resources */,
-				584025862CA23D7A0094710A /* GoogleService-Info.plist in Resources */,
+				584025882CA3A3C30094710A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +327,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -390,7 +390,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -415,8 +415,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AJUR2JK7K5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Login/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -430,6 +432,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.swiftpow.Login;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -442,8 +445,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AJUR2JK7K5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Login/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -457,6 +462,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.swiftpow.Login;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
