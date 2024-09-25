@@ -124,7 +124,7 @@ class RegisterView: UIView {
             print("Por favor, preencha todos os campos.")
             return
         }
-        viewController.viewModel.createUser(email: email, password: password)
+        viewController.viewModel.createUser(email: email, password: password, username: name)
     }
     
     override func layoutSubviews() {
