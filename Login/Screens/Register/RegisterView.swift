@@ -90,6 +90,7 @@ class RegisterView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(LoginEnum.Register.title, for: .normal)
+        button.addTarget(self, action: #selector(signUpButtonAction), for: .touchUpInside)
         button.setTitleColor(UIColor(named: "PurpleSecondary"), for: .normal)
         button.backgroundColor = UIColor(named: "PurpleTertiary")
         button.layer.cornerRadius = 12
@@ -114,6 +115,16 @@ class RegisterView: UIView {
     
     @objc func configBackGround() {
         configBackground.applyGradientBackground(view: self, firstColor: LoginEnum.Colors.purplePrimary, secondColor: LoginEnum.Colors.purpleSecondary)
+    }
+    
+    @objc func signUpButtonAction() {
+        guard let email = emailLabelTextField.text,
+              let password = passwordTextField.text,
+              let name = userNameTextField.text else {
+            print("Por favor, preencha todos os campos.")
+            return
+        }
+        viewController.viewModel.createUser(email: email, password: password, username: name)
     }
     
     override func layoutSubviews() {
