@@ -24,7 +24,5 @@ public enum LoginEnum {
     enum Login {
         static let title = "Log in"
         static let dontHaveAccount = "don't have an account"
-        static let google = "Log in with Google"
-        static let apple = "Log in with Apple"
     }
 }
