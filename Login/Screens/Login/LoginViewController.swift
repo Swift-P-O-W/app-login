@@ -8,12 +8,20 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    let viewModel: LoginViewModelProtocol
+    var loginView: LoginView?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    init(viewModel: LoginViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
-
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        loginView = LoginView(viewController: self)
+        self.view = self.loginView ?? UIView()
+    }
 }
-
