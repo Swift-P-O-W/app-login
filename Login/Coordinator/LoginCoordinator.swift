@@ -14,4 +14,10 @@ public class LoginCoordinator: LoginMainCoordinator {
     public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
+    func callRegister() {
+        let viewModel = RegisterViewModel()
+        let viewController = RegisterViewController(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }

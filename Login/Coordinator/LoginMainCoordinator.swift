@@ -10,4 +10,6 @@ import UIKit
 
 protocol LoginMainCoordinator {
     var navigationController: UINavigationController { get set}
+    
+    func callRegister()
 }
