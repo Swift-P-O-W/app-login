@@ -11,12 +11,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let loginViewModel: LoginViewModel = LoginViewModel()
+        let viewModel: LoginViewModel = LoginViewModel()
         let window = UIWindow(windowScene: windowScene)
-        let viewController = LoginViewController(viewModel: loginViewModel)
+        let viewController = LoginViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigationController
@@ -51,7 +50,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-

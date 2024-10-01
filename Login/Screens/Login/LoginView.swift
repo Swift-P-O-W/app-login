@@ -108,7 +108,6 @@ class LoginView: UIView {
         addSubview(signUpButton)
     }
     
-    
     private func configConstraints(){
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
