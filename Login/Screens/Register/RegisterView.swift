@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RegisterView: UIView {
+class RegisterView: UIView, UITextFieldDelegate {
     private let viewController: RegisterViewController
     private let configBackground = ConfigBackground()
     
@@ -43,6 +43,9 @@ class RegisterView: UIView {
     lazy var userNameTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.tintColor = .white
+        textField.textColor = .white
+        textField.delegate = self
         textField.keyboardType = .default
         textField.isSecureTextEntry = false
         textField.layer.cornerRadius = 12
@@ -63,7 +66,10 @@ class RegisterView: UIView {
     lazy var emailLabelTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.keyboardType = .default
+        textField.tintColor = .white
+        textField.textColor = .white
+        textField.delegate = self
+        textField.keyboardType = .emailAddress
         textField.isSecureTextEntry = false
         textField.layer.cornerRadius = 12
         textField.backgroundColor = UIColor(named: "PurplePrimary")
@@ -83,6 +89,7 @@ class RegisterView: UIView {
     lazy var passwordTextField: PasswordTextField = {
         let passwordField = PasswordTextField()
         passwordField.translatesAutoresizingMaskIntoConstraints = false
+        passwordField.delegate = self
         return passwordField
     }()
     
@@ -103,6 +110,7 @@ class RegisterView: UIView {
         configBackGround()
         configHierarchy()
         configConstraints()
+        setupTapGesture()
     }
     
     required init?(coder: NSCoder) {
@@ -186,4 +194,18 @@ class RegisterView: UIView {
             signUpButton.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
+    
+    private func setupTapGesture() {
+         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+         self.addGestureRecognizer(tapGesture)
+     }
+     
+     @objc private func dismissKeyboard() {
+         self.endEditing(true)
+     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          textField.resignFirstResponder()
+          return true
+      }
 }

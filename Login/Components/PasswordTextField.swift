@@ -10,10 +10,6 @@ import UIKit
 
 class PasswordTextField: UIView {
     
-    var text: String? {
-          return textField.text
-      }
-    
     lazy var eyeButton: UIButton = {
         let eyeButton = UIButton(type: .custom)
         eyeButton.setImage(UIImage(named: "visibility"), for: .normal)
@@ -80,5 +76,19 @@ class PasswordTextField: UIView {
             eyeButton.widthAnchor.constraint(equalToConstant: 30),
             eyeButton.heightAnchor.constraint(equalToConstant: 30)
         ])
+    }
+    
+    // MARK: - Retornando valores
+    var text: String? {
+          return textField.text
+      }
+    
+    var delegate: UITextFieldDelegate? {
+        get {
+            return textField.delegate
+        }
+        set {
+            textField.delegate = newValue
+        }
     }
 }
