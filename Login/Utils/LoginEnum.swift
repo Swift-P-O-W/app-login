@@ -20,4 +20,9 @@ public enum LoginEnum {
         static let purplePrimary = "#52396D"
         static let purpleSecondary = "#3A215D"
     }
+    
+    enum Login {
+        static let title = "Log in"
+        static let dontHaveAccount = "don't have an account"
+    }
 }

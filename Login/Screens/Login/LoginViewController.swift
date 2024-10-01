@@ -7,26 +7,21 @@
 
 import UIKit
 
-import UIKit
-
 class LoginViewController: UIViewController {
-    let button = UIButton(type: .system) // Botão
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Configuração do botão
-        button.setTitle("Ir para Registro", for: .normal)
-        button.addTarget(self, action: #selector(navigateToRegister), for: .touchUpInside)
-        button.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
-        button.center = view.center
-        view.addSubview(button) // Adiciona o botão à view
+    let viewModel: LoginViewModelProtocol
+    var loginView: LoginView?
+
+    init(viewModel: LoginViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
     
-    // Função chamada ao tocar no botão
-    @objc func navigateToRegister() {
-        let viewModel = RegisterViewModel() // Supondo que você tenha um ViewModel
-        let registerVC = RegisterViewController(viewModel: viewModel)
-        navigationController?.pushViewController(registerVC, animated: true) // Navegação para a RegisterViewController
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        loginView = LoginView(viewController: self)
+        self.view = self.loginView ?? UIView()
     }
 }
