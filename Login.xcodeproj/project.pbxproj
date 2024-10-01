@@ -23,6 +23,8 @@
 		58249FB92C9505160035AE45 /* ConfigBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58249FB82C9505160035AE45 /* ConfigBackground.swift */; };
 		582EAF662C9A54DE00673136 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EAF652C9A54DE00673136 /* PasswordTextField.swift */; };
 		584025882CA3A3C30094710A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 584025872CA3A3C30094710A /* GoogleService-Info.plist */; };
+		58EF9CF52CAC988500AF0329 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF9CF42CAC988200AF0329 /* LoginCoordinator.swift */; };
+		58EF9CF72CAC993A00AF0329 /* LoginMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF9CF62CAC993200AF0329 /* LoginMainCoordinator.swift */; };
 		AE88ED5C603710AA72AE59E3 /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477C5E5DD89FA2C3A1ABDBA3 /* Pods_Login.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		58249FB82C9505160035AE45 /* ConfigBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigBackground.swift; sourceTree = "<group>"; };
 		582EAF652C9A54DE00673136 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		584025872CA3A3C30094710A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		58EF9CF42CAC988200AF0329 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		58EF9CF62CAC993200AF0329 /* LoginMainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainCoordinator.swift; sourceTree = "<group>"; };
 		C8B6169A3CE3C55B871F6037 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
 		E0A8574C4CFD0CFB446CB07C /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				58249F892C9245760035AE45 /* Assets.xcassets */,
+				58EF9CF32CAC987900AF0329 /* Coordinator */,
 				582EAF632C9A54BA00673136 /* Components */,
 				58249FB52C94E8CA0035AE45 /* Utils */,
 				5868515A2C9D09D500D2422F /* Screens */,
@@ -138,6 +143,15 @@
 				58249FAE2C939A260035AE45 /* Register */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		58EF9CF32CAC987900AF0329 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				58EF9CF62CAC993200AF0329 /* LoginMainCoordinator.swift */,
+				58EF9CF42CAC988200AF0329 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		8C8C95CDC766363EF0A4B499 /* Pods */ = {
@@ -278,6 +292,8 @@
 				58249FB02C939A260035AE45 /* RegisterViewController.swift in Sources */,
 				58249FB92C9505160035AE45 /* ConfigBackground.swift in Sources */,
 				58249FAF2C939A260035AE45 /* RegisterView.swift in Sources */,
+				58EF9CF52CAC988500AF0329 /* LoginCoordinator.swift in Sources */,
+				58EF9CF72CAC993A00AF0329 /* LoginMainCoordinator.swift in Sources */,
 				299F366B2CAC50B900C0DCBC /* LoginView.swift in Sources */,
 				58249FB72C94E8D80035AE45 /* LoginEnum.swift in Sources */,
 				299F366D2CAC523800C0DCBC /* LoginViewModel.swift in Sources */,
