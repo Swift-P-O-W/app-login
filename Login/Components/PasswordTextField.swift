@@ -53,10 +53,12 @@ class PasswordTextField: UIView {
         addSubview(textField)
         textField.rightView = rightPaddingView
     }
+    
     @objc private func togglePasswordVisibility(_ sender: UIButton) {
         sender.isSelected.toggle()
         textField.isSecureTextEntry.toggle()
     }
+    
     private func setupConstraints() {
         
         NSLayoutConstraint.activate([

@@ -35,6 +35,7 @@ class LoginView: UIView {
         textField.keyboardType = .default
         textField.isSecureTextEntry = false
         textField.layer.cornerRadius = 12
+        textField.backgroundColor = UIColor(named: "PurplePrimary")
         return textField
     }()
     
@@ -102,7 +103,7 @@ class LoginView: UIView {
         addSubview(emailLabel)
         addSubview(emailLabelTextField)
         addSubview(passwordLabel)
-        addSubview(emailLabelTextField)
+        addSubview(passwordTextField)
         addSubview(signInButton)
         addSubview(signUpButton)
     }
@@ -111,7 +112,33 @@ class LoginView: UIView {
     private func configConstraints(){
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
-            title.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            
+            emailLabel.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 30),
+            emailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            
+            emailLabelTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 5),
+            emailLabelTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            emailLabelTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+            emailLabelTextField.heightAnchor.constraint(equalToConstant: 40),
+            
+            passwordLabel.topAnchor.constraint(equalTo: emailLabelTextField.bottomAnchor, constant: 5),
+            passwordLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            
+            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 5),
+            passwordTextField.leadingAnchor.constraint(equalTo: emailLabelTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: emailLabelTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: emailLabelTextField.heightAnchor),
+            
+            signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
+            signInButton.trailingAnchor.constraint(equalTo: emailLabelTextField.trailingAnchor),
+            signInButton.leadingAnchor.constraint(equalTo: emailLabelTextField.leadingAnchor),
+            signInButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
+            signUpButton.trailingAnchor.constraint(equalTo: emailLabelTextField.trailingAnchor),
+            signUpButton.leadingAnchor.constraint(equalTo: emailLabelTextField.leadingAnchor),
+            signUpButton.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
 }
