@@ -68,6 +68,7 @@ class LoginView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(LoginEnum.Register.title, for: .normal)
+        button.addTarget(self, action: #selector(signUpButtonAction), for: .touchUpInside)
         button.setTitleColor(UIColor(named: "PurpleSecondary"), for: .normal)
         button.backgroundColor = UIColor(named: "PurpleTertiary")
         button.layer.cornerRadius = 12
@@ -106,6 +107,10 @@ class LoginView: UIView {
         addSubview(passwordTextField)
         addSubview(signInButton)
         addSubview(signUpButton)
+    }
+    
+    @objc func signUpButtonAction() {
+        viewController.viewModel.coordinator.callRegister()
     }
     
     private func configConstraints(){
