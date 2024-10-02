@@ -15,6 +15,12 @@
 - Sign Up
 - Navigation between screens
 
+### 📱 App Screenshots
+
+|       🍏       |              SplashScreen               |              Sign Up               | Sign In                           | Home                            |
+| :------------: | :----------------------------------------: | :---------------------------------------: | -------------------------------------- | ------------------------------------- |
+| Screens | <img src="Login/Doc/SplashScreen.png" width="200px;" height="400" /> | <img src="Login/Doc/SignUpScreen.png" width="200px;" height="400" /> | <img src="Login/Doc/SignUpScreen.png" width="200px;" height="400" /> |
+
 ## ✨ Authors
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
