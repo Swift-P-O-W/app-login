@@ -28,6 +28,9 @@
 		584025882CA3A3C30094710A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 584025872CA3A3C30094710A /* GoogleService-Info.plist */; };
 		58EF9CF52CAC988500AF0329 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF9CF42CAC988200AF0329 /* LoginCoordinator.swift */; };
 		58EF9CF72CAC993A00AF0329 /* LoginMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF9CF62CAC993200AF0329 /* LoginMainCoordinator.swift */; };
+		58EF9CFC2CACC7CE00AF0329 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF9CFB2CACC7CB00AF0329 /* HomeView.swift */; };
+		58EF9CFE2CACC7D500AF0329 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF9CFD2CACC7D100AF0329 /* HomeViewController.swift */; };
+		58EF9D002CACC7DD00AF0329 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EF9CFF2CACC7D800AF0329 /* HomeViewModel.swift */; };
 		AE88ED5C603710AA72AE59E3 /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477C5E5DD89FA2C3A1ABDBA3 /* Pods_Login.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		584025872CA3A3C30094710A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58EF9CF42CAC988200AF0329 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		58EF9CF62CAC993200AF0329 /* LoginMainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainCoordinator.swift; sourceTree = "<group>"; };
+		58EF9CFB2CACC7CB00AF0329 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		58EF9CFD2CACC7D100AF0329 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		58EF9CFF2CACC7D800AF0329 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C8B6169A3CE3C55B871F6037 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
 		E0A8574C4CFD0CFB446CB07C /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +162,7 @@
 		5868515A2C9D09D500D2422F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				58EF9CFA2CACC7C500AF0329 /* Home */,
 				584025842C9E62F10094710A /* Login */,
 				58249FAE2C939A260035AE45 /* Register */,
 			);
@@ -169,6 +176,16 @@
 				58EF9CF42CAC988200AF0329 /* LoginCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		58EF9CFA2CACC7C500AF0329 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				58EF9CFF2CACC7D800AF0329 /* HomeViewModel.swift */,
+				58EF9CFD2CACC7D100AF0329 /* HomeViewController.swift */,
+				58EF9CFB2CACC7CB00AF0329 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		8C8C95CDC766363EF0A4B499 /* Pods */ = {
@@ -307,8 +324,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				58249F852C9245750035AE45 /* LoginViewController.swift in Sources */,
+				58EF9D002CACC7DD00AF0329 /* HomeViewModel.swift in Sources */,
 				58249FB12C939A260035AE45 /* RegisterViewModel.swift in Sources */,
 				582EAF662C9A54DE00673136 /* PasswordTextField.swift in Sources */,
+				58EF9CFE2CACC7D500AF0329 /* HomeViewController.swift in Sources */,
 				58249FB02C939A260035AE45 /* RegisterViewController.swift in Sources */,
 				58249FB92C9505160035AE45 /* ConfigBackground.swift in Sources */,
 				58249FAF2C939A260035AE45 /* RegisterView.swift in Sources */,
@@ -319,6 +338,7 @@
 				299F366D2CAC523800C0DCBC /* LoginViewModel.swift in Sources */,
 				58249F812C9245750035AE45 /* AppDelegate.swift in Sources */,
 				29DE13422C9F67CF0012EB4F /* (null) in Sources */,
+				58EF9CFC2CACC7CE00AF0329 /* HomeView.swift in Sources */,
 				29DE13402C9F654F0012EB4F /* (null) in Sources */,
 				58249F832C9245750035AE45 /* SceneDelegate.swift in Sources */,
 			);
