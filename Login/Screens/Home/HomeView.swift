@@ -11,6 +11,14 @@ class HomeView: UIView {
     private let viewController: HomeViewController
     private let configBackground = ConfigBackground()
     
+    lazy var title: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = LoginEnum.Home.title
+        label.font = .systemFont(ofSize: 24)
+        label.textColor = .white
+        return label
+    }()
     
     init(viewController: HomeViewController) {
         self.viewController = viewController
