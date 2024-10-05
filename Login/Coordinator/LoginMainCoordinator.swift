@@ -12,4 +12,5 @@ protocol LoginMainCoordinator {
     var navigationController: UINavigationController { get set}
     
     func callRegister()
+    func callHome()
 }

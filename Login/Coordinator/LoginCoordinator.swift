@@ -20,4 +20,10 @@ public class LoginCoordinator: LoginMainCoordinator {
         let viewController = RegisterViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func callHome() {
+        let viewModel = HomeViewModel(coordinator: self)
+        let viewController = HomeViewController(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
