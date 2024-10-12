@@ -32,10 +32,17 @@ class LoginView: UIView {
     lazy var emailLabelTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.keyboardType = .default
+        textField.keyboardType = .emailAddress
+        textField.tintColor = .white
+        textField.textColor = .white
         textField.isSecureTextEntry = false
         textField.layer.cornerRadius = 12
         textField.backgroundColor = UIColor(named: "PurplePrimary")
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: textField.frame.height))
+        textField.leftView = paddingView
+        textField.leftViewMode = .always
+
         return textField
     }()
     
@@ -59,6 +66,7 @@ class LoginView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(LoginEnum.Login.title, for: .normal)
         button.setTitleColor(UIColor(named: "PurpleSecondary"), for: .normal)
+        button.addTarget(self, action: #selector(signInButtonAction), for: .touchUpInside)
         button.backgroundColor = UIColor(named: "PurpleTertiary")
         button.layer.cornerRadius = 12
         return button
@@ -111,6 +119,15 @@ class LoginView: UIView {
     
     @objc func signUpButtonAction() {
         viewController.viewModel.coordinator.callRegister()
+    }
+    
+    @objc func signInButtonAction(_ sender: UIButton) {
+        guard let email = emailLabelTextField.text,
+              let password = passwordTextField.text else {
+            print("Por favor, preencha todos os campos.")
+            return
+        }
+        viewController.viewModel.signInUser(email: email, password: password)
     }
     
     private func configConstraints(){

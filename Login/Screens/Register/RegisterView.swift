@@ -50,6 +50,11 @@ class RegisterView: UIView, UITextFieldDelegate {
         textField.isSecureTextEntry = false
         textField.layer.cornerRadius = 12
         textField.backgroundColor = UIColor(named: "PurplePrimary")
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: textField.frame.height))
+        textField.leftView = paddingView
+        textField.leftViewMode = .always
+        
         return textField
     }()
     
@@ -73,6 +78,11 @@ class RegisterView: UIView, UITextFieldDelegate {
         textField.isSecureTextEntry = false
         textField.layer.cornerRadius = 12
         textField.backgroundColor = UIColor(named: "PurplePrimary")
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: textField.frame.height))
+        textField.leftView = paddingView
+        textField.leftViewMode = .always
+        
         return textField
     }()
     
