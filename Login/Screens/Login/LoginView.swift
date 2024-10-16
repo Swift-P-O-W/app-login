@@ -38,7 +38,8 @@ class LoginView: UIView {
         textField.isSecureTextEntry = false
         textField.layer.cornerRadius = 12
         textField.backgroundColor = UIColor(named: "PurplePrimary")
-        
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = .always

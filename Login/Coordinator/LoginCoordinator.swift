@@ -15,8 +15,14 @@ public class LoginCoordinator: LoginMainCoordinator {
         self.navigationController = navigationController
     }
     
+    func callLogin() {
+        let viewModel = LoginViewModel(coordinator: self)
+        let viewController = LoginViewController(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
     func callRegister() {
-        let viewModel = RegisterViewModel()
+        let viewModel = RegisterViewModel(coordinator: self)
         let viewController = RegisterViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }

@@ -75,6 +75,8 @@ class RegisterView: UIView, UITextFieldDelegate {
         textField.textColor = .white
         textField.delegate = self
         textField.keyboardType = .emailAddress
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         textField.isSecureTextEntry = false
         textField.layer.cornerRadius = 12
         textField.backgroundColor = UIColor(named: "PurplePrimary")
