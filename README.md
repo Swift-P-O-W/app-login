@@ -14,6 +14,7 @@
 - Sign In
 - Sign Up
 - Navigation between screens
+- Welcome screen with the name of user logged
 
 ### 📱 App Screenshots
 
