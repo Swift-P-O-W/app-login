@@ -23,8 +23,7 @@ class HomeView: UIView {
     lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = LoginEnum.Register.username
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 24, weight: .medium)
         label.textColor = .white
         return label
     }()
@@ -32,6 +31,7 @@ class HomeView: UIView {
     init(viewController: HomeViewController) {
         self.viewController = viewController
         super.init(frame: .zero)
+        
         configBackGround()
         configHierarchy()
         configConstraints()

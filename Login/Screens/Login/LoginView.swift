@@ -128,7 +128,14 @@ class LoginView: UIView {
             print("Por favor, preencha todos os campos.")
             return
         }
+        
+        viewController.viewModel.onLoginSuccess = { [weak self] in
+                self?.emailLabelTextField.text = ""
+                self?.passwordTextField.textField.text = ""
+            }
+        
         viewController.viewModel.signInUser(email: email, password: password)
+        
     }
     
     private func configConstraints(){

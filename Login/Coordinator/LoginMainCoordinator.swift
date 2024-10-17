@@ -13,5 +13,5 @@ protocol LoginMainCoordinator {
     
     func callLogin()
     func callRegister()
-    func callHome()
+    func callHome(withUserName name: String)
 }

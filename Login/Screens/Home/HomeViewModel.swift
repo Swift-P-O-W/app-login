@@ -10,12 +10,15 @@ import UIKit
 
 protocol HomeViewModelProtocol {
     var coordinator: LoginMainCoordinator { get }
+    var userName: String { get }
 }
 
 class HomeViewModel: HomeViewModelProtocol {
     var coordinator: LoginMainCoordinator
+    var userName: String
     
-    init(coordinator: LoginMainCoordinator) {
+    init(coordinator: LoginMainCoordinator, userName: String) {
         self.coordinator = coordinator
+        self.userName = userName
     }
 }

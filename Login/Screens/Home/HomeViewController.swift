@@ -24,4 +24,9 @@ class HomeViewController: UIViewController {
         homeView = HomeView(viewController: self)
         self.view = self.homeView ?? UIView()
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        homeView?.userNameLabel.text = viewModel.userName
+    }
 }
