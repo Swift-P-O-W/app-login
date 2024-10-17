@@ -11,6 +11,7 @@ import Firebase
 
 protocol LoginViewModelProtocol {
     var coordinator: LoginMainCoordinator { get }
+    var onLoginSuccess: (() -> Void)? { get set }
     func signInUser(email: String, password: String)
 }
 
@@ -23,11 +24,15 @@ class LoginViewModel: LoginViewModelProtocol {
         self.coordinator = coordinator
     }
     
+    var onLoginSuccess: (() -> Void)?
+    
     func signInUser(email: String, password: String) {
         auth.signIn(withEmail: email, password: password) { authResult, error in
             if error == nil {
-                print("Sucesso Login")
-                self.coordinator.callHome()
+                let name = authResult?.user.displayName ?? "username"
+                self.coordinator.callHome(withUserName: name)
+                
+                self.onLoginSuccess?()
             } else {
                 print("Error login, error: \(error?.localizedDescription ?? "")")
             }

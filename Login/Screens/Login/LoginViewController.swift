@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    let viewModel: LoginViewModelProtocol
+    var viewModel: LoginViewModelProtocol
     var loginView: LoginView?
 
     init(viewModel: LoginViewModelProtocol) {

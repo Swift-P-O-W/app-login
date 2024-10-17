@@ -11,11 +11,17 @@ import UIKit
 
 protocol RegisterViewModelProtocol {
     func createUser(email: String, password: String, username: String)
+    var coordinator: LoginMainCoordinator { get }
 }
 
 class RegisterViewModel: RegisterViewModelProtocol {
     
+    var coordinator: LoginMainCoordinator
     var auth: Auth = Auth.auth()
+    
+    init(coordinator: LoginMainCoordinator) {
+        self.coordinator = coordinator
+    }
     
     func createUser(email: String, password: String, username: String) {
         auth.createUser(withEmail: email, password: password) { (result, error) in
@@ -30,6 +36,7 @@ class RegisterViewModel: RegisterViewModelProtocol {
                         print("Erro ao salvar o username: \(error.localizedDescription)")
                     } else {
                         print("Usuário cadastrado com sucesso e username salvo!")
+                        self.coordinator.callLogin()
                     }
                 }
             }

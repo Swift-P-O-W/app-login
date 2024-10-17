@@ -15,7 +15,7 @@ class HomeView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = LoginEnum.Home.title
-        label.font = .systemFont(ofSize: 24)
+        label.font = .systemFont(ofSize: 32, weight: .bold)
         label.textColor = .white
         return label
     }()
@@ -23,8 +23,7 @@ class HomeView: UIView {
     lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = LoginEnum.Register.username
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 24, weight: .medium)
         label.textColor = .white
         return label
     }()
@@ -32,6 +31,7 @@ class HomeView: UIView {
     init(viewController: HomeViewController) {
         self.viewController = viewController
         super.init(frame: .zero)
+        
         configBackGround()
         configHierarchy()
         configConstraints()
@@ -54,7 +54,8 @@ class HomeView: UIView {
     }
     
     private func configHierarchy(){
-        //
+        addSubview(title)
+        addSubview(userNameLabel)
     }
     
     @objc func signUpButtonAction() {
@@ -63,7 +64,11 @@ class HomeView: UIView {
     
     private func configConstraints(){
         NSLayoutConstraint.activate([
-            //
+            title.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            title.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            userNameLabel.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 20),
+            userNameLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
 }
