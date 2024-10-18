@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginView: UIView {
+class LoginView: UIView, UITextFieldDelegate {
     private let viewController: LoginViewController
     private let configBackground = ConfigBackground()
     
@@ -40,6 +40,7 @@ class LoginView: UIView {
         textField.backgroundColor = UIColor(named: "PurplePrimary")
         textField.autocapitalizationType = .none
         textField.autocorrectionType = .no
+        textField.delegate = self
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = .always
@@ -59,6 +60,7 @@ class LoginView: UIView {
     lazy var passwordTextField: PasswordTextField = {
         let passwordField = PasswordTextField()
         passwordField.translatesAutoresizingMaskIntoConstraints = false
+        passwordField.delegate = self
         return passwordField
     }()
     
@@ -90,6 +92,7 @@ class LoginView: UIView {
         configBackGround()
         configHierarchy()
         configConstraints()
+        setupTapGesture()
     }
     
     required init?(coder: NSCoder) {
@@ -170,4 +173,18 @@ class LoginView: UIView {
             signUpButton.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
+    
+    private func setupTapGesture() {
+         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+         self.addGestureRecognizer(tapGesture)
+     }
+     
+     @objc private func dismissKeyboard() {
+         self.endEditing(true)
+     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          textField.resignFirstResponder()
+          return true
+      }
 }
