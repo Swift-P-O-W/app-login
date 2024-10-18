@@ -20,7 +20,7 @@
 
 |       🍏       |              SplashScreen               |              Sign Up               | Sign In                           | Home                            |
 | :------------: | :----------------------------------------: | :---------------------------------------: | -------------------------------------- | ------------------------------------- |
-| Screens | <img src="Login/Doc/SplashScreen.png" width="200px;" height="400" /> | <img src="Login/Doc/SignUpScreen.png" width="200px;" height="400" /> | <img src="Login/Doc/SignUpScreen.png" width="200px;" height="400" /> | <img src="Login/Doc/HomeScreen.png" width="200px;" height="400" />
+| Screens | <img src="Login/Doc/SplashScreen.png" width="220px;" height="400" /> | <img src="Login/Doc/SignUpScreen.png" width="220px;" height="400" /> | <img src="Login/Doc/SignUpScreen.png" width="220px;" height="400" /> | <img src="Login/Doc/HomeScreen.png" width="220px;" height="400" />
 
 ## ✨ Authors
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
