@@ -29,7 +29,7 @@ class PasswordTextField: UIView {
         textField.backgroundColor = UIColor(named: "PurplePrimary")
         textField.textColor = .white
         textField.rightViewMode = .always
-        
+        textField.textContentType = .username
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: textField.frame.height))
         textField.leftView = paddingView
         textField.leftViewMode = .always

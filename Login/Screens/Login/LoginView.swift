@@ -133,12 +133,11 @@ class LoginView: UIView, UITextFieldDelegate {
         }
         
         viewController.viewModel.onLoginSuccess = { [weak self] in
-                self?.emailLabelTextField.text = ""
-                self?.passwordTextField.textField.text = ""
-            }
+            self?.emailLabelTextField.text = ""
+            self?.passwordTextField.textField.text = ""
+        }
         
         viewController.viewModel.signInUser(email: email, password: password)
-        
     }
     
     private func configConstraints(){
